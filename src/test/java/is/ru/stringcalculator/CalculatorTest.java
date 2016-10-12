@@ -76,5 +76,10 @@ public class CalculatorTest {
 			assertEquals(message, e.getMessage());
 		}
 	}
+	
+	@Test
+	public void TestBiggerThan1000() throws Exception {
+		assertEquals(42, Calculator.add("4\n36,2,1001"));
+	}
 
 }
