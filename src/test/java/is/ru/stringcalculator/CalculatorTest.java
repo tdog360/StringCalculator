@@ -43,5 +43,15 @@ public class CalculatorTest {
 	public void testNewLineWithComma() throws Exception {
 		assertEquals(6, Calculator.add("3\n2,1"));
 	}
-
+	
+	@Test
+	public void testOneNegativeNumbers() throws Exception {
+		try {
+			assertEquals(5, Calculator.add("-3,4,2\n2"));
+		}
+		catch (Exception e) {
+			String message = "Negatives not allowed: -3";
+			assertEquals(message, e.getMessage());
+		}
+	}
 }
