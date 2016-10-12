@@ -38,5 +38,10 @@ public class CalculatorTest {
 	public void testNewLine() throws Exception {
 		assertEquals(5, Calculator.add("3\n2"));
 	}
+	
+	@Test
+	public void testNewLineWithComma() throws Exception {
+		assertEquals(6, Calculator.add("3\n2,1"));
+	}
 
 }
