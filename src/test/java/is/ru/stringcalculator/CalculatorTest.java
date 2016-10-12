@@ -28,5 +28,10 @@ public class CalculatorTest {
     public void testMultipleNumbers(){
     	assertEquals(6, Calculator.add("1,2,3"));
     }
+	
+	@Test
+    public void testBunchOfNumbers(){
+    	assertEquals(64, Calculator.add("15,15,10,20,1,3"));
+    }
 
 }
