@@ -65,4 +65,16 @@ public class CalculatorTest {
 			assertEquals(message, e.getMessage());
 		}
 	}
+	
+	@Test
+	public void testMoreNegativeNumbers() throws Exception {
+		try {
+			assertEquals(-4, Calculator.add("2,-4,3,-5"));
+		}
+		catch (Exception e) {
+			String message = "Negatives not allowed: -4,-5";
+			assertEquals(message, e.getMessage());
+		}
+	}
+
 }

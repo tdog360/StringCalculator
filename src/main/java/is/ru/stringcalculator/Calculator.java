@@ -38,8 +38,6 @@ public class Calculator {
 				throw new IllegalArgumentException("Negatives not allowed: " + negativeNums);
 			}
 		
-		
-		
 		return total;
     }
 
