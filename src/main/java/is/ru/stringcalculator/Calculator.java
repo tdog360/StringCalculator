@@ -30,13 +30,13 @@ public class Calculator {
 		    if(toInt(number) >= 0)
 				total += toInt(number);
 			else
-				negativeNums += "," + number;
-			
-			if(toInt(number) < 0) {
-				negativeNums = negativeNums.substring(5, negativeNums.length());
+				negativeNums += ("," + number);
+		}
+		for(String nums : numbers)
+			if(toInt(nums) < 0) {
+				negativeNums = negativeNums.substring(5);
 				throw new IllegalArgumentException("Negatives not allowed: " + negativeNums);
 			}
-		}
 		
 		
 		
