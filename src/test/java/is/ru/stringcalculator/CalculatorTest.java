@@ -33,5 +33,10 @@ public class CalculatorTest {
     public void testBunchOfNumbers(){
     	assertEquals(64, Calculator.add("15,15,10,20,1,3"));
     }
+	
+	@Test
+	public void testNewLine() throws Exception {
+		assertEquals(5, Calculator.add("3\n2"));
+	}
 
 }
