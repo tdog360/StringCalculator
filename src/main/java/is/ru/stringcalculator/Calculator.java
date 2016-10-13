@@ -26,7 +26,7 @@ public class Calculator {
 	}
 	
 	private static String[] splitNewDelim(String numbers, String delim){
-		return numbers.substring(numbers.indexOf("\n") + 1).split(delim);;
+		return numbers.substring(numbers.indexOf("\n") + 1).split(delim);
 	}
       
     private static int sum(String[] numbers){
