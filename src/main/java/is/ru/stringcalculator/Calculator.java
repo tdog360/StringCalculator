@@ -7,8 +7,11 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
-		
-		if(text.contains(",") || text.contains("\n"))
+		if(text.startsWith("//")) {
+			String delim = text.substring(text.indexOf("//") +2, text.indexOf("\n"));
+			return sum(splitNewDelim(text, delim));
+		}
+		else if(text.contains(",") || text.contains("\n"))
 			return sum(split(text));	
 		else
 			return 1;
@@ -20,6 +23,11 @@ public class Calculator {
 
 	private static String[] split(String numbers){
 	    return numbers.split(",|\n");
+	}
+	
+	private static String[] splitNewDelim(String numbers, String delim){
+	    String[] subNumbers = numbers.substring(numbers.indexOf("\n") + 1).split(delim);
+		return subNumbers;
 	}
       
     private static int sum(String[] numbers){

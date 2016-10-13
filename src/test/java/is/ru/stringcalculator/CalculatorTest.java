@@ -81,5 +81,10 @@ public class CalculatorTest {
 	public void TestBiggerThan1000() throws Exception {
 		assertEquals(42, Calculator.add("4\n36,2,1001"));
 	}
+	
+	@Test
+	public void AddDelimeter() throws Exception {
+		assertEquals(3, Calculator.add("//;\n1;2"));
+	}
 
 }
