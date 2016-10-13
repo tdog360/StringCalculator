@@ -26,29 +26,25 @@ public class Calculator {
 	}
 	
 	private static String[] splitNewDelim(String numbers, String delim){
-	    String[] subNumbers = numbers.substring(numbers.indexOf("\n") + 1).split(delim);
-		return subNumbers;
+		return numbers.substring(numbers.indexOf("\n") + 1).split(delim);;
 	}
       
     private static int sum(String[] numbers){
  	    int total = 0;
 		String negativeNums = null;
 
-        for(String number : numbers){
+        for(String number : numbers) {
 		    if(toInt(number) >= 0 && toInt(number) < 1000)
 				total += toInt(number);
 			else
 				negativeNums += ("," + number);
 		}
-		for(String nums : numbers)
+		for(String nums : numbers) {
 			if(toInt(nums) < 0) {
 				negativeNums = negativeNums.substring(5);
 				throw new IllegalArgumentException("Negatives not allowed: " + negativeNums);
 			}
-		
+		}
 		return total;
     }
-
-
-
 }
