@@ -78,13 +78,18 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void TestBiggerThan1000() throws Exception {
+	public void testBiggerThan1000() throws Exception {
 		assertEquals(42, Calculator.add("4\n36,2,1001"));
 	}
 	
 	@Test
-	public void AddDelimeter() throws Exception {
+	public void testAddDelimeter() throws Exception {
 		assertEquals(3, Calculator.add("//;\n1;2"));
+	}
+	
+	@Test
+	public void testNewDelimeter() throws Exception {
+		assertEquals(9, Calculator.add("//!\n4!3!2"));
 	}
 
 }
