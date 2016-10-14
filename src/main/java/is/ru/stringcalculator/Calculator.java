@@ -8,7 +8,7 @@ public class Calculator {
 			return 0;
 		}
 		if(text.startsWith("//")) {
-			String delim = text.substring(text.indexOf("//") +2, text.indexOf("\n"));
+			String delim = text.substring(text.indexOf("//") +2, text.indexOf("//") +3);
 			return sum(splitNewDelim(text, delim));
 		}
 		else if(text.contains(",") || text.contains("\n"))
@@ -26,7 +26,7 @@ public class Calculator {
 	}
 	
 	private static String[] splitNewDelim(String numbers, String delim){
-		return numbers.substring(numbers.indexOf("\n") + 1).split(delim);
+		return numbers.substring(4).split(delim);
 	}
       
     private static int sum(String[] numbers){
